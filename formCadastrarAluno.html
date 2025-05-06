@@ -7,12 +7,15 @@
 </head>
 <body>
     <h1>Cadastrar Aluno</h1>
-    <form action="cadastrarNoBanco.php" method="post">
+    <form action="cadastrarNoBanco.php" method="post" enctype="multipart/form-data">
         <label for="nome">Nome:</label>
         <input type="text" name="nome" id="nome">
         <br/><br/>
         <label for="altura">Altura:</label>
         <input type="number" name="altura" id="altura">
+        <br/><br/>
+        <label for="foto">Foto do Aluno:</label>
+        <input type="file" name="foto" id="foto">
         <br/><br/>
         <label for="dtNascimento">Data de Nascimento:</label>
         <input type="date" name="dtNascimento" id="dtNascimento">

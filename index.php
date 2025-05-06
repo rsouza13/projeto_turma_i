@@ -23,6 +23,7 @@ $result = $stmt->setFetchMode(PDO::FETCH_ASSOC);
     <table>
         <tr>
             <th>ID</th>
+            <th>Foto</th>
             <th>Nome</th>
             <th>Altura</th>
             <th>Data de Nascimento</th>
@@ -33,6 +34,7 @@ $result = $stmt->setFetchMode(PDO::FETCH_ASSOC);
             while($result = $stmt->fetch()){
                 echo '<tr>';
                 echo '  <td>'. $result['id'] .'</td>';
+                echo '  <td><img src="fotoAluno/'.$result['foto'].'" width="30px" ></td>';
                 echo '  <td id="nomeAluno'.$result['id'].'">'. $result['nome'] .'</td>';
                 echo '  <td>'. $result['altura'] .'</td>';
                 echo '  <td>'. $result['data_nascimento'] .'</td>';
