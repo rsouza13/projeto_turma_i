@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cadastrar Aluno</title>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js" integrity="sha512-pHVGpX7F/27yZ0ISY+VVjyULApbDlD0/X0rgGbTqCE7WFW5MezNTWG/dnhtbBuICzsd0WQPgpE4REBLv+UqChw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 </head>
 <body>
     <h1>Cadastrar Aluno</h1>
@@ -13,6 +15,9 @@
         <br/><br/>
         <label for="altura">Altura:</label>
         <input type="number" name="altura" id="altura">
+        <br/><br/>
+        <label for="telefone">Telefone:</label>
+        <input type="text" name="telefone" id="telefone" placeholder="(00) 0000-0000">
         <br/><br/>
         <label for="foto">Foto do Aluno:</label>
         <input type="file" name="foto" id="foto">
@@ -29,5 +34,10 @@
         <br /> <br /> 
         <input type="submit" value="Cadastrar Aluno" />
     </form>
+    <script>
+        $(document).ready(function(){
+            $('#telefone').mask('(00) 0000-0000');
+        });
+    </script>
 </body>
 </html>
