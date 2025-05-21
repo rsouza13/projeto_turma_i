@@ -55,6 +55,37 @@ $result = $stmt->setFetchMode(PDO::FETCH_ASSOC);
         ?>
         </tbody>
     </table>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
+    <canvas id="myChart" style="width:100%;max-width:600px"></canvas>
+
+    <script>
+    var xValues = ["Masculino", "Feminino", ""];
+    var yValues = [6, 3, 0];
+    var barColors = ["blue", "red", ""];
+
+    new Chart("myChart", {
+    type: "bar",
+    labels: xValues,
+    data: {
+        labels: xValues,
+        datasets: [{
+        backgroundColor: barColors,
+        data: yValues
+        }]
+    },
+    options: {
+        legend: {display: false},
+        title: {
+        display: true,
+        text: "Quantidade de Alunos por Sexo"
+        }
+    }
+    });
+    </script>
+
+
     <script>
         $(document).ready( function () {
             $('#tableAlunos').DataTable({
